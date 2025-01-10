@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Website Homepage</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  
+    <header>
+        <nav class="navbar">
+            <div class="logo">Booking</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#featured">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#booking-form" class="cta-btn">Book Now</a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+   
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to the Best Booking Platform</h1>
+            <p>Book your next adventure with us today!</p>
+            <a href="#booking-form" class="cta-btn">Start Booking</a>
+        </div>
+        <form id="booking-form" class="booking-form">
+            <input type="text" placeholder="Location" required>
+            <input type="date" required>
+            <input type="number" placeholder="Guests" required>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+   
+    <section id="featured" class="featured-section">
+        <h2>Our Top Destinations</h2>
+        <div class="featured-items">
+            <div class="featured-item">
+                <img src="https://media.nomadicmatt.com/2022/vietnamcheap1.jpeg" alt="Destination 1">
+                <p>Beautiful Beach</p>
+            </div>
+            <div class="featured-item">
+                <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2024/01/18085607/Hanoi.jpg" alt="Destination 2">
+                <p>Mountain Escape</p>
+            </div>
+            <div class="featured-item">
+                <img src="https://www.freespirittravelinsurance.com/wp-content/uploads/2019/11/iStock-1402239110-1024x684.jpg" alt="Destination 3">
+                <p>City Life</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="testimonials" class="testimonials-section">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <img src="https://us.123rf.com/450wm/nadtochiy/nadtochiy2104/nadtochiy210400743/168258257-une-fille-aux-cheveux-noirs-prend-des-photos-de-la-ville-de-budva-de-loin-sur-un-smartphone.jpg?ver=6" alt="Customer 1">
+                <p>"Amazing service, I loved the booking experience!"</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://img.freepik.com/free-photo/female-tourists-spread-their-arms-held-their-wings_1150-7449.jpg" alt="Customer 2">
+                <p>"Everything was seamless and easy to use. Highly recommend!"</p>
+                <p>- Sarah Lee</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://img.freepik.com/free-photo/joyful-couple-sightseeing_23-2147827974.jpg" alt="Customer 3">
+                <p>"Great selection of destinations and excellent customer support!"</p>
+                <p>- Mike Harris</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="newsletter">
+                <input type="email" placeholder="Subscribe to our newsletter" required>
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
