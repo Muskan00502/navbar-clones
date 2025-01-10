@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 60%;
+      max-width: 900px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    input[type="text"], input[type="email"], input[type="date"], input[type="tel"], select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Student Registration Form</h2>
+    <form action="#" method="POST">
+      <table>
+        <tr>
+          <th colspan="2">Personal Information</th>
+        </tr>
+        <tr>
+          <td>First Name (Max 50 Characters):</td>
+          <td><input type="text" name="first_name" maxlength="50" required></td>
+        </tr>
+        <tr>
+          <td>Last Name (Max 50 Characters):</td>
+          <td><input type="text" name="last_name" maxlength="50" required></td>
+        </tr>
+        <tr>
+          <td>Email (Valid Email Address):</td>
+          <td><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td>Mobile Number (10 Digits):</td>
+          <td><input type="tel" name="mobile_number" pattern="[0-9]{10}" required></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Date of Birth:</td>
+          <td><input type="date" name="dob" required></td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td><textarea name="address" maxlength="150" required></textarea></td>
+        </tr>
+        <tr>
+          <td>City (Max 50 Characters):</td>
+          <td><input type="text" name="city" maxlength="50" value="Bangalore" required></td>
+        </tr>
+        <tr>
+          <td>Pin Code (6 Digits):</td>
+          <td><input type="text" name="pin_code" pattern="[0-9]{6}" value="560068" required></td>
+        </tr>
+        <tr>
+          <td>State (Max 50 Characters):</td>
+          <td><input type="text" name="state" maxlength="50" value="Karnataka" required></td>
+        </tr>
+        <tr>
+          <td>Country:</td>
+          <td><input type="text" name="country" value="India" required></td>
+        </tr>
+
+        <tr>
+          <th colspan="2">Hobbies</th>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="hobbies" value="Drawing"> Drawing</label></td>
+          <td><label><input type="checkbox" name="hobbies" value="Singing"> Singing</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="hobbies" value="Dancing"> Dancing</label></td>
+          <td><label><input type="checkbox" name="hobbies" value="Sketching"> Sketching</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="hobbies" value="Others"> Others</label></td>
+          <td><input type="text" name="other_hobbies" placeholder="Specify if others" maxlength="50"></td>
+        </tr>
+
+        <tr>
+          <th colspan="2">Qualification</th>
+        </tr>
+        <tr>
+          <td>Highest Qualification:</td>
+          <td><input type="text" name="qualification" maxlength="50" required></td>
+        </tr>
+
+        <tr>
+          <th colspan="2">Courses Applied For</th>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="courses" value="BCA"> BCA</label></td>
+          <td><label><input type="checkbox" name="courses" value="B.Com"> B.Com</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="courses" value="B.Sc"> B.Sc</label></td>
+          <td><label><input type="checkbox" name="courses" value="BA"> BA</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="courses" value="MCA"> MCA</label></td>
+          <td><label><input type="checkbox" name="courses" value="M.Com"> M.Com</label></td>
+        </tr>
+        <tr>
+          <td><label><input type="checkbox" name="courses" value="M.Sc"> M.Sc</label></td>
+          <td><label><input type="checkbox" name="courses" value="MA"> MA</label></td>
+        </tr>
+
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" class="submit-btn" value="Submit">
+            <input type="reset" class="submit-btn" value="Reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+</body>
+</html>

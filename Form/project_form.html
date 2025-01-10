@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      max-width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Project Management</h2>
+
+    <form action="#" method="post">
+     
+      <label for="project-name">Project Name:</label>
+      <input type="text" id="project-name" name="project-name" required>
+
+   
+      <label for="assigned-to">Assigned to:</label>
+      <input type="text" id="assigned-to" name="assigned-to" required>
+
+     
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start-date" required>
+
+     
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" name="end-date" required>
+
+   
+      <label for="priority">Priority:</label>
+      <select id="priority" name="priority" required>
+        <option value="high">High</option>
+        <option value="average">Average</option>
+        <option value="low">Low</option>
+      </select>
+
+    
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
