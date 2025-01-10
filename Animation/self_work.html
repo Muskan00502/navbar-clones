@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing Pulse Spinner</title>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+      overflow: hidden;
+    }
+
+    /* Spinner Container */
+    .spinner {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Central Circle */
+    .spinner::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #00ffcc;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc, 0 0 45px #00ffcc;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Outer Ring */
+    .spinner::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border: 4px solid transparent;
+      border-top: 4px solid #00ffcc;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Spinner -->
+  <div class="spinner"></div>
+</body>
+</html>

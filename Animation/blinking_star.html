@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Blinking Stars</title>
+  <style>
+    /* General body styling */
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(circle, #001d4a, #000428); /* Night sky gradient */
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Star container */
+    .stars {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Star styling */
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+      animation: twinkle 2s infinite alternate ease-in-out;
+    }
+
+    /* Define positions for stars */
+    .star:nth-child(1) { top: 5%; left: 20%; animation-delay: 0.2s; }
+    .star:nth-child(2) { top: 10%; left: 50%; animation-delay: 0.4s; }
+    .star:nth-child(3) { top: 15%; left: 80%; animation-delay: 0.6s; }
+    .star:nth-child(4) { top: 25%; left: 30%; animation-delay: 0.8s; }
+    .star:nth-child(5) { top: 35%; left: 70%; animation-delay: 1s; }
+    .star:nth-child(6) { top: 40%; left: 90%; animation-delay: 1.2s; }
+    .star:nth-child(7) { top: 50%; left: 10%; animation-delay: 1.4s; }
+    .star:nth-child(8) { top: 60%; left: 60%; animation-delay: 1.6s; }
+
+    /* Twinkle animation */
+    @keyframes twinkle {
+      0% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.5; transform: scale(1); }
+    }
+
+    /* Moon */
+    .moon {
+      position: absolute;
+      top: 10%;
+      left: 80%;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #ffffff, #f4f4f4 60%);
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Mountains */
+    .mountains {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to top, #0b0b0b, #2e2e2e);
+      clip-path: polygon(0% 100%, 25% 70%, 50% 100%, 75% 60%, 100% 100%);
+    }
+
+    /* Ground */
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 25%;
+      background: linear-gradient(to top, #013d61, #004e92);
+    }
+
+    /* Trees */
+    .tree {
+      position: absolute;
+      bottom: 15%;
+      width: 30px;
+      height: 80px;
+      background: #4b2e06;
+    }
+
+    .tree::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      width: 80px;
+      height: 80px;
+      background: #0b6623;
+      border-radius: 50%;
+      left: -25px;
+    }
+
+    /* Position trees */
+    .tree:nth-child(1) { left: 20%; }
+    .tree:nth-child(2) { left: 40%; }
+    .tree:nth-child(3) { left: 60%; }
+    .tree:nth-child(4) { left: 80%; }
+  </style>
+</head>
+<body>
+  <!-- Stars -->
+  <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+  <!-- Moon -->
+  <div class="moon"></div>
+
+  <!-- Mountains -->
+  <div class="mountains"></div>
+
+  <!-- Ground -->
+  <div class="ground"></div>
+
+  <!-- Trees -->
+  <div class="tree"></div>
+  <div class="tree"></div>
+  <div class="tree"></div>
+  <div class="tree"></div>
+</body>
+</html>

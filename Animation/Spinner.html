@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Spinner</title>
+  <style>
+    /* General body styling */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Spinner Container */
+    .spinner {
+      width: 100px;
+      height: 100px;
+      border: 8px solid transparent;
+      border-top: 8px solid #4caf50; /* Primary color */
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Spinner Animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Loading Text */
+    .loading-text {
+      position: absolute;
+      top: 60%;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      animation: fade 1.5s ease-in-out infinite;
+    }
+
+    /* Text Fade Animation */
+    @keyframes fade {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Spinner -->
+  <div class="spinner"></div>
+  
+  <!-- Loading Text -->
+  <div class="loading-text">Loading...</div>
+</body>
+</html>

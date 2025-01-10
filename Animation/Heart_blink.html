@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Straight Blinking Heart</title>
+  <style>
+    /* Center the heart */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f8f8; /* Light background */
+    }
+
+    /* Heart container */
+    .heart {
+      position: relative;
+      width: 150px; /* Heart width */
+      height: 150px; /* Heart height */
+      background-color: red;
+      transform: rotate(-45deg);
+      animation: blink 1s infinite; /* Continuous blinking */
+    }
+
+    /* Rounded top-left part of the heart */
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      border-radius: 50%; /* Rounded shape */
+    }
+
+    /* Position the top parts of the heart */
+    .heart::before {
+      top: -75px;
+      left: 0;
+    }
+    .heart::after {
+      left: 75px;
+      top: 0;
+    }
+
+    /* Blinking animation */
+    @keyframes blink {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(0.9) rotate(-45deg);
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+</body>
+</html>
